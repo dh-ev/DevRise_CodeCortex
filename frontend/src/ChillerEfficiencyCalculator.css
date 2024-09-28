@@ -1,0 +1,277 @@
+:root {
+    /* Base font size */
+    font-size: 10px;   
+    
+    /* Set neon color */
+    --neon-text-color: rgb(46, 71, 126);
+    --neon-border-color: rgb(8, 24, 39);
+  }
+  
+  @font-face {
+    font-family: title;
+    src: url("./Fonts/Fast\ Hand.otf");
+  }
+  
+  @font-face {
+    font-family: form;
+    src: url("./Fonts/Louis\ George\ Cafe.ttf");
+  }
+  
+  
+  @font-face {
+    font-family: tagline;
+    src: url("./Fonts/Minimal\ Performance.ttf");
+  }
+  
+  /* General styling for the body */
+  body {
+    font-family: 'Exo 2', sans-serif; /* Updated font */
+    margin: 0;
+    padding: 0;
+    color: #BBE1FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000; /* Added background color */
+  }
+  
+  body {
+    margin: 0; /* Reset margin */
+    background: linear-gradient(338deg, #000000, #0f405d, #455d6e, #154261);
+    background-size: 800% 800%;
+    animation: AnimationName 20s ease infinite;
+  }
+  
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Navbar styling */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element’s total width and height */
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.35); 
+    position: fixed; /* Keeps the navbar at the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    height: 100px;
+    padding: 15px 20px;  /* Spacing inside the navbar */
+    z-index: 1000; /* Ensures the navbar stays above other elements */
+    box-sizing: border-box; /* Include padding and border in width and height */
+}
+
+  
+  /* Navbar heading/logo */
+  nav h2 {
+    color: #BBE1FA; /* Light blue text for contrast */
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: title;
+    padding: 15px;
+    text-shadow: 0 0 5px var(--neon-text-color), 0 0 10px var(--neon-text-color); /* Neon effect */
+  }
+  
+  /* Tagline styling */
+  .tagline {
+    text-align: center;
+    margin-top: 105px;
+    animation: fadeIn 2s ease-in-out;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .tagline h1 {
+    margin: 0;
+    color: #BBE1FA;
+    font-family: tagline;
+    font-size: 40px;
+  }
+  
+  /* Container for the form */
+  .container{
+    padding: 20px;
+    border-radius: 55px;
+    width: 1000px;
+    margin-top: 30px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    animation: slideIn 1.5s ease-in-out;
+  
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    color: white;
+  
+  }
+  
+      
+  
+  
+  
+  
+  /* Form title styling */
+  .form-title {
+    text-align: center;
+    font-size: 46px; /* Increased font size */
+    color: #BBE1FA;
+    margin-bottom: 60px; /* Space below the title */
+    font-family: form;
+  }
+  
+  /* Styling for the form inputs and labels */
+  .input-group {
+    display: flex; /* Use flexbox to align children side by side */
+    justify-content: space-between; /* Space out input boxes */
+    margin-bottom: 20px; /* Spacing between groups */
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: form;
+  }
+  
+  /* Inner input box styling */
+  .input-box {
+    width: 48%; /* Each input box takes up about half the row */
+    margin-bottom: 40px;
+  }
+  
+  .input-box label{
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-family: form;
+  }
+  
+  .input-box ::placeholder{
+    padding-left: 20px;
+    font-family: form;
+  }
+  
+  /* Label styling */
+  form label {
+    display: block;
+    color: #BBE1FA;
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between label and input */
+    font-family: form;
+  }
+  
+  /* Updated input styling */
+  form input[type="number"] {
+    width: 100%; /* Full width of the input box */
+    padding: 10px;
+    border: 2px solid #3282B8;
+    border-radius: 25px;
+    background-color: #BBE1FA;
+    color: #0F4C75;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: form;
+  }
+  
+  .submitButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Optional: add some space at the top */
+  }
+  
+  
+  input[type="submit"] {
+    width: 20%; /* Full width */
+    padding: 12px;
+    background-color: #0f293a;
+    color: #bccad3;
+    border: none;
+    border-radius: 55px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: form;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #BBE1FA;
+    color: #072539;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  /* Gradient animation keyframes */
+  @-webkit-keyframes AnimationName {
+    0% {background-position: 91% 0%;}
+    50% {background-position: 10% 100%;}
+    100% {background-position: 91% 0%;}
+  }
+  
+  @-moz-keyframes AnimationName {
+    0% {background-position: 91% 0%;}
+    50% {background-position: 10% 100%;}
+    100% {background-position: 91% 0%;}
+  }
+  
+  @keyframes AnimationName {
+    0% {background-position: 91% 0%;}
+    50% {background-position: 10% 100%;}
+    100% {background-position: 91% 0%;}
+  }
+
+  .resultContainer {
+    padding: 20px;                     /* Same padding as the form */
+    border-radius: 55px;               /* Rounded corners */
+    width: 900px;                     /* Same width */
+    margin-top: 30px;
+    margin-left: 20px;                  /* Space above */
+    padding-bottom: 40px;              /* Additional bottom padding */
+    padding-left: 30px;                /* Left padding */
+    padding-right: 30px;               /* Right padding */
+    animation: slideIn 1.5s ease-in-out; /* Animation for slide-in effect */
+    
+    background: rgba(255, 255, 255, 0.2);   /* Apply blur effect to background */
+    color: white;                       /* Text color */
+}
+
+.prediction-result {
+    font-family: form;
+    font-size: 20px;                  /* Slightly larger text */
+    color: white;                       /* Text color */
+}
+
+.prediction-result h3 {
+    margin-bottom: 10px;               /* Space below the heading */
+}
